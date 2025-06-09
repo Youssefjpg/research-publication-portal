@@ -39,16 +39,21 @@ Backend setup:
 - Navigate to the backend directory
     <pre> ```cd backend ``` </pre>
 - Create and activate virtual environment:
-    - Mac:
-        <pre> ```python3 -m venv venv ``` </pre> creates environment
-        <pre> ```source venv/bin/activate ```</pre> activates environment
-    - Windows (Command Prompt):
-        <pre> ```python -m venv venv ``` </pre> creates environment
-        <pre> ```venv\Scripts\activate```</pre> activates environment
+    - Mac:  
+    creates environment
+        <pre> ```python3 -m venv venv ``` </pre>  
+    activates environment
+        <pre> ```source venv/bin/activate ```</pre>  
+
+    - Windows (Command Prompt):  
+        creates environment
+        <pre> ```python -m venv venv ``` </pre>   
+        activates environment
+        <pre> ```venv\Scripts\activate```</pre> 
     - Install requirements.txt:
         <pre> ```pip install -r requirements.txt ``` </pre>
 
-    This installs the following:
+    This installs the following:  
         Flask, Flask-CORS, python-dotenv, requests and other packages used internally by Flask
 
 Frontend setup:
