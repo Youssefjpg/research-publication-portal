@@ -16,26 +16,26 @@ A simple full-stack web app that lets users search PubMed for academic articles.
 # Paths and Design
 
 - `/backend`: consists of all the backend files and directories.  
-    -`/services`: consists of two helper functions files for the `POST` and `GET` methods.  
-        -`details_helper.py`: consists of `GET` method helper function called `fetch_ids_from_pubmed`.  
-        -`search_helper.py`: consists of `POST` method helper function called `search_pubmed_articles`.  
-    -`/templates`: includes a basic `index.html` file that displays a message when in the base directory.  
-        -`index.html`: includes a message for when in the base directory.  
-    -`app.py`: the main backend file that runs the `GET` and `POST` methods with the help of the helper files and the `config.py` file.  
-    -`config.py`: loads the ID and DETAIL endpoints from the `.env` file using `load_dotenv()`.  
-    -`requirements.txt`: the file that includes all the packages need to be installed for the backend.  
+    - `/services`: consists of two helper functions files for the `POST` and `GET` methods.  
+        - `details_helper.py`: consists of `GET` method helper function called `fetch_ids_from_pubmed`.  
+        - `search_helper.py`: consists of `POST` method helper function called `search_pubmed_articles`.  
+    - `/templates`: includes a basic `index.html` file that displays a message when in the base directory.  
+        - `index.html`: includes a message for when in the base directory.  
+    - `app.py`: the main backend file that runs the `GET` and `POST` methods with the help of the helper files and the `config.py` file.  
+    - `config.py`: loads the ID and DETAIL endpoints from the `.env` file using `load_dotenv()`.  
+    - `requirements.txt`: the file that includes all the packages need to be installed for the backend.  
 
--`/frontend`: consists of all the frontend files and directories.  
-    -`/src`: including React, vite, and Axios files.  
-        -`/components`: consists of the main parts of the frontend.  
-            -`ArticleDetail.jsx`: displays detailed info. for selected articles.  
-            -`SearchForm.jsx`: sends search query to backend.  
-            -`SearchResults.jsx`: displays returned articles.  
+- `/frontend`: consists of all the frontend files and directories.  
+    - `/src`: including React, vite, and Axios files.  
+        - `/components`: consists of the main parts of the frontend.  
+            - `ArticleDetail.jsx`: displays detailed info. for selected articles.  
+            - `SearchForm.jsx`: sends search query to backend.  
+            - `SearchResults.jsx`: displays returned articles.  
 
 
 # Required Installations and Packages
 
-Backend setup:
+Backend setup:  
     - Navigate to the backend directory
         <pre> ```cd backend ``` </pre>
     - Create and activate virtual environment:
