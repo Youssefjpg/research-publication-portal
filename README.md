@@ -36,17 +36,17 @@ A simple full-stack web app that lets users search PubMed for academic articles.
 # Required Installations and Packages
 
 Backend setup:  
-    - Navigate to the backend directory
-        <pre> ```cd backend ``` </pre>
-    - Create and activate virtual environment:
-        -Mac:
-            <pre> ```python3 -m venv venv ``` </pre> creates environment
-            <pre> ```source venv/bin/activate ```</pre> activates environment
-        -Windows (Command Prompt):
-            <pre> ```python -m venv venv ``` </pre> creates environment
-            <pre> ```venv\Scripts\activate```</pre> activates environment
-    -Install requirements.txt:
-            <pre> ```pip install -r requirements.txt ``` </pre>
+- Navigate to the backend directory
+    <pre> ```cd backend ``` </pre>
+- Create and activate virtual environment:
+    - Mac:
+        <pre> ```python3 -m venv venv ``` </pre> creates environment
+        <pre> ```source venv/bin/activate ```</pre> activates environment
+    - Windows (Command Prompt):
+        <pre> ```python -m venv venv ``` </pre> creates environment
+        <pre> ```venv\Scripts\activate```</pre> activates environment
+    - Install requirements.txt:
+        <pre> ```pip install -r requirements.txt ``` </pre>
 
     This installs the following:
         Flask, Flask-CORS, python-dotenv, requests and other packages used internally by Flask
@@ -57,21 +57,21 @@ Frontend setup:
 
 # Ports used
 
-The following ports MUST be available:
-    `http://127.0.0.1:5000` for the backend
+The following ports MUST be available:  
+    `http://127.0.0.1:5000` for the backend  
     `http://localhost:5173/` for the frontend
     
 
 # How to test/run the program
 
-After installing all the packages and making sure that the specified ports are available:
-    - Open a new terminal and navigate to `/backend` then activate the virtual environment.
-    - Then run the following command <pre> ```python app.py``` </pre> to run the backend section.
-    - Open a another seperate terminal and navigate to `/frontend`.
-    - Then run the following command <pre> ```npm run dev``` </pre> to run the frontend section.
-    - Then open your browser and navigate to `http://localhost:5173/`.
-    - Now you can search for biomedical articles from PubMed
-    - Example search keywords are: `cancer`, `COVID-19`, or `Alzheimer`
+After installing all the packages and making sure that the specified ports are available:  
+- Open a new terminal and navigate to `/backend` then activate the virtual environment.
+- Then run the following command <pre> ```python app.py``` </pre> to run the backend section.
+- Open a another seperate terminal and navigate to `/frontend`.
+- Then run the following command <pre> ```npm run dev``` </pre> to run the frontend section.
+- Then open your browser and navigate to `http://localhost:5173/`.
+- Now you can search for biomedical articles from PubMed
+- Example search keywords are: `cancer`, `COVID-19`, or `Alzheimer`
 
 
 
