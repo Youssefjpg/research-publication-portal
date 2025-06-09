@@ -17,7 +17,8 @@ function SearchResults({ articles, hasSearched }) {
       <ul className="results-list">
         {articles.map((article, index) => (
           <li key={index} className="result-item">
-            <h3>{article.Title || 'No Title Available'}</h3>
+
+            <h3 style={{ backgroundColor: 'yellow' }}>{article.Title || 'No Title Available'}</h3> 
             
             <p><strong>PMID:</strong> {article.PMID || 'Not Available'}</p>
             <p><strong>Publication Year:</strong> {article.PublicationYear || 'Unknown'}</p>
