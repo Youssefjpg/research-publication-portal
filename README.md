@@ -1,7 +1,7 @@
 # Research Publication Portal
 
-Youssef Hassan  
-Monday June 9th, 2025  
+Name: Youssef Hassan  
+Date: Monday June 9th, 2025  
 Email: youssefmostafahassan1@gmail.com  
 
 Yale Biomedical Informatics and Data Science  
@@ -49,12 +49,13 @@ Backend setup:
         creates environment
         <pre> ```python -m venv venv ``` </pre>   
         activates environment
-        <pre> ```venv\Scripts\activate```</pre> 
-    - Install requirements.txt:
-        <pre> ```pip install -r requirements.txt ``` </pre>
+        <pre> ```venv\Scripts\activate```</pre>  
 
-    This installs the following:  
-        Flask, Flask-CORS, python-dotenv, requests and other packages used internally by Flask
+- Install requirements.txt:
+    <pre> ```pip install -r requirements.txt ``` </pre>
+
+This installs the following:  
+- Flask, Flask-CORS, python-dotenv, requests and other packages used internally by Flask
 
 Frontend setup:
 <pre> ```bash npm install ``` </pre>

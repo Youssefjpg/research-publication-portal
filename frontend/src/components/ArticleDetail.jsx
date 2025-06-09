@@ -1,3 +1,7 @@
+// This file shows the full details of a selected article.
+// It displays fields like title, abstract, authors, journal, and MeSH terms if available.
+
+
 function ArticleDetail({ article }) {
   if (!article) return null;
 

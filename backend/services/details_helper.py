@@ -1,35 +1,38 @@
 import requests
 import xml.etree.ElementTree as ET
 
+
+# this is the helper function that gets details about articles for each id found
 def fetch_ids_from_pubmed(id_list, detail_endpoint, fields=None):
-    # Return early if there's nothing to look up
+    # return empty list if no result found
     if not id_list:
         return []
 
-    # Use all available fields if none are specified
+    # if no fields specified use all fields
     fields = fields or [
         'PMID', 'Title', 'Abstract', 'AuthorList', 'Journal', 'PublicationYear', 'MeSHTerms'
     ]
 
-    # Set up the request parameters to fetch details from PubMed
+    
     params = {
-        'db': 'pubmed',
-        'id': ','.join(id_list),
-        'retmode': 'xml'
+        'db': 'pubmed', 
+        'id': ','.join(id_list), #joins ids into one string seperated by commas
+        'retmode': 'xml' #response be in xml 
     }
 
-    # Request publication details from PubMed
+    #sends the GET request to PubMed detail endpoint with above parameters
     response = requests.get(detail_endpoint, params=params)
 
+    ##if the HTTP request fails return empty list
     if response.status_code != 200:
         return []
 
-    # Convert the response content from XML to an ElementTree object
+    #parse xml repsonse
     xml_root = ET.fromstring(response.content)
 
-    publications = []
+    publications = [] #this is the return list 
 
-    # Iterate on each article in the XML
+    #iterate over each <PubmedArticle> node in the xml and extracts data from it and saves it in pub dictionary
     for entry in xml_root.findall('.//PubmedArticle'):
         pub = {}
 
@@ -44,6 +47,8 @@ def fetch_ids_from_pubmed(id_list, detail_endpoint, fields=None):
 
         if 'AuthorList' in fields or 'all' in fields:
             authors = []
+            #here does another loop over <AuthorList> 
+            # because it has first and last name and extracts them in authors list then adds list to the pub dictionary
             for person in entry.findall('.//Author'):
                 first = person.findtext('ForeName') or ''
                 last = person.findtext('LastName') or ''
@@ -66,7 +71,7 @@ def fetch_ids_from_pubmed(id_list, detail_endpoint, fields=None):
                     mesh_terms.append(descriptor)
             pub['MeSHTerms'] = mesh_terms
 
-        # Handle missing fields by only including found ones
+        # Handle missing fields by only appending found ones
         publications.append(pub)
 
-    return publications
+    return publications #returns found publications

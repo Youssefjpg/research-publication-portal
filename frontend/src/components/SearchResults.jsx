@@ -1,3 +1,5 @@
+// This file displays a list of search results once the user submits a query.
+
 function SearchResults({ articles, hasSearched }) {
   // If user searched but no results were found
   if (hasSearched && (!articles || articles.length === 0)) {
